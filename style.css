@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+
+:root {
+    --gradient1: #CB218E;
+    --gradient2: #6617CB;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 10px;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: #921CB0;
+    color: white;
+}
+
+.nav-button {
+    background-color: none;
+    color: white;
+    border: none;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.element-header {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    font-family: 'Pacifico', specimen;
+    font-size: 20px;
+    color: var(--gradient1);
+    height: 60px;
+    position: relative;
+    padding: 15px;
+    margin: 0;
+}
+
+.element-header:after {
+    content: "";
+    content: attr(data-hover);
+    font-family: 'Dosis';
+    font-size: 18px;
+    line-height: 30px;
+    opacity: 0%;
+    position: absolute;
+}
+
+.element-header:hover {
+    color: white;
+    font-size: 0;
+}
+
+.element-header:hover:after {
+    transition: opacity 1000ms ease;
+    opacity: 100%;
+}
+
+.element {
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 1vw 4vw;
+    display: block;
+    position: relative;
+}
+
+.element:hover:before {
+    transition: width 600ms ease;
+    width: 100%;
+}
+
+.element:before {
+    background: linear-gradient(to right,
+            transparent,
+            var(--gradient1),
+            var(--gradient2));
+    content: "";
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+}
+
+.element:nth-child(5) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
