@@ -88,7 +88,7 @@ ul {
 .element-header:after {
     content: attr(data-hover);
     font-family: 'Dosis';
-    font-size: 18px;
+    font-size: 25px;
     line-height: 30px;
     opacity: 0%;
     position: absolute;
